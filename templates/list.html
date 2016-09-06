@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block title %}Tweet list{% endblock %}
+
+{% block h1 %}{{screen_name}}{% endblock %}
+
+{% block content %}
+    {% for tweet in tweets %}
+        <a href="{{tweet.url}}">{{tweet.text}}</a><br>
+    {% endfor %}
+{% endblock %}

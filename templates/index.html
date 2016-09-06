@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block h1 %}Digite um usuário:{% endblock %}
+
+{% block content %}
+        <form action="" method="POST" class="form-inline">
+          {{ form.hidden_tag() }}
+
+          {% include "_messages.html" %}
+          <div class="form-group input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            {{ form.screen_name(class='form-control', type='text') }}
+          </div>
+
+          <div class="form-group input-group">
+            {{ form.amount(class='form-control', type='select') }}
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="btn btn-default btn-block" value="Buscar" />
+          </div>
+
+        </form>
+{% endblock %}
